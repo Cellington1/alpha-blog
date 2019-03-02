@@ -1,4 +1,68 @@
-// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
-@import "bootstrap-sprockets";
+$navbar-bg: #08088A;
+
+
+
 @import "bootstrap";
 
+#logo {
+	float: left;
+	font-size: 1.7em;
+	color: #a442f4;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-weight: bold;
+}
+
+#logo:hover {
+	color: #a442f4;
+	text-decoration: none;
+}
+
+.center {
+	text-align: center;
+}
+
+.jumbotron {
+	background-image: asset-url('cover_page.jpeg');
+	background-size: cover;
+	height: 750px;
+}
+
+.jumbotron h1{
+	color: #a442f4;
+	text-align: center;
+	margin-bottom: 30px;
+	letter-spacing: 1px;
+	font-weight: bold;
+	font-size: 5em;
+}
+
+.btn-xlarge {
+	font-size: 1.7em;
+	background-color: #a442f4;
+}
+
+.footer {
+	margin-top: 50px;
+	padding-top: 5px;
+	border-top: 1px solid #a442f4;
+	color: #777;
+}
+
+.footer a:hover {
+	color: #222;
+}
+
+.footer small {
+	float: left;
+}
+
+.footer ul {
+	float: right;
+	list-style: none;
+}
+
+.footer li {
+	float: left;
+	margin-left: 15px;
+}
