@@ -1,6 +1,14 @@
 class ArticlesController < ApplicationController
+	def index
+		@articles = Article.all
+	end
+
 	def new
 		@article = Article.new
+	end
+
+	def edit
+		@article = Article.find(params[:id])
 	end
 
 	def create
@@ -13,6 +21,20 @@ class ArticlesController < ApplicationController
 			redirect_to article_path(@article)
 		else
 			render 'new'
+		end
+		# redirect_to article_path(@article)
+	end
+   
+  def update
+  	#render plain: params[:article].inspect
+		@article = Article.find(params[:id])
+		# @article.save
+		if @article.update(article_params)
+			# do something
+			flash[:notice] = "Article was updated"
+			redirect_to article_path(@article)
+		else
+			render 'edit'
 		end
 		# redirect_to article_path(@article)
 	end
