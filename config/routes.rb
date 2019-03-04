@@ -9,4 +9,7 @@ Rails.application.routes.draw do
 	get 'login', to: 'pages#login'
 
   resources :articles
+
+  get 'signup',to: 'users#new'
+  resources :users, except: [:new]
 end
